@@ -29,7 +29,7 @@ const Movie = (props) => {
                 push('/movies')
             })
             .catch(err => {
-                console.log(err)
+                console.log(err.response)
             })
     }
 
@@ -64,8 +64,7 @@ const Movie = (props) => {
                         <section>
                             <span className="m-2 btn btn-dark">Favorite</span>
                             <Link to={`/movies/edit/${movie.id}`} className="m-2 btn btn-success">Edit</Link>
-                            <span 
-                            onClick={handleDelete}
+                            <span onClick={handleDelete}
                             className="delete"><input type="button" className="m-2 btn btn-danger" value="Delete"/></span>
                         </section>
                     </div>
